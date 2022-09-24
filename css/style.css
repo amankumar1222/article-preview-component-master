@@ -1,0 +1,234 @@
+/* import font  */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+/* reset css  */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
+:root {
+    --vary-dark-blue: hsl(217, 19%, 35%);
+    --Desaturated-blue: hsl(214, 17%, 51%);
+    --Grayish-Blue: hsl(212, 23%, 69%);
+    --Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+
+
+body {
+    background-color: var(--Light-Grayish-Blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.main-container {
+    height: 300px;
+    width: 800px;
+    display: flex;
+}
+
+.img-container {
+    width: 40%;
+    height: 100%;
+    background: url(/images/drawers.jpg)no-repeat center center/cover;
+    border-radius: 10px 0px 0px 10px;
+
+}
+
+.content-container {
+    width: 60%;
+    height: 100%;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 0px 10px 10px 0px;
+    position: relative;
+}
+
+.para {
+    margin: 15px 0px;
+    font-size: 13px;
+    color: var(--Desaturated-blue);
+}
+
+.heading {
+    color: var(--vary-dark-blue);
+    font-size: 23px;
+    line-height: 1.35;
+    font-weight: 700;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.avtar {
+    display: flex;
+    align-items: center;
+}
+
+.name {
+    margin-left: 10px;
+}
+
+.name p {
+    font-size: 13px;
+    color: var(--Desaturated-blue);
+}
+
+.name span {
+    font-weight: 700;
+}
+
+.img {
+    height: 45px;
+    border-radius: 25px;
+}
+
+.share img {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 25px;
+    background-color: var(--Light-Grayish-Blue);
+}
+.items{
+    display: flex;
+}
+
+.per-share{
+    display: flex;
+    background-color: var(--vary-dark-blue);
+    list-style-type: none;
+    height: 50px;
+    width: 220px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    position: absolute;
+    right: -62px;
+    bottom: 120px;
+    display: none;
+}
+.per-share::after{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--vary-dark-blue);
+    transform: rotate(45deg);
+    bottom: -10px;
+}
+.per-share li a{
+    text-decoration: none;
+    color: var(--Grayish-Blue);
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 5px;
+}
+.per-share li{
+
+    margin: 0px 5px;
+}
+.per-share li a img{
+    height: 15px;
+}
+.hide-share{
+    display: none;
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+
+}
+
+/* footer  */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+
+
+/* css responsiveness  */
+
+@media only screen and (max-width: 820px) {
+    body {
+        justify-content: center;
+    }
+
+    .main-container {
+        flex-direction: column;
+        height: 550px;
+        width: 350px;
+    }
+
+    .content-container,
+    .img-container {
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    .img-container {
+        height: 40%;
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    .content-container {
+        height: 55%;
+        padding: 35px 30px;
+        border-radius: 0px 0px 10px 10px;
+
+    }
+
+    .heading {
+        font-size: 18px;
+
+    }
+    .para{
+        line-height: 1.7;
+    }
+
+    footer {
+        display: none;
+    }
+    .per-share{
+        display: flex;
+        background-color: var(--vary-dark-blue);
+        list-style-type: none;
+        height: 70px;
+        width: 100%;
+         justify-content: space-around;
+         text-align: center;
+        border-radius: 0px 0px 10px 10px;
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        display: none;
+    }
+    .per-share::after{
+        display: none;
+    }
+    .hide-share{
+        display: block;
+        background-color: var(--Desaturated-blue);
+        padding: 5px 7px;
+        border-radius: 15px;
+
+    }
+    .hide-share img{
+        /* filter: invert(100); */
+        filter:brightness(5);
+    }
+}
